@@ -1,0 +1,31 @@
+server:
+  port: 9093
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/md5_db?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+#    password: alvin
+    password: T_dl123456
+    max-idle: 10
+    max-wait: 10000
+    min-idle: 5
+    initial-size: 5
+    test-on-borrow: false
+    test-while-idle: true
+
+
+  profiles:
+    active: dev
+
+application:
+  version: 1.0
+
+md5:
+  key:
+    min: 1
+    max: 20
